@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Chase&#39;s Club">
 <meta property="og:description" content="最近开始使用Laradock作为开发环境进行项目开发，按照教程将必备的软件都搭建好了，结果在项目中一直连接不上MySQL。网上查了好多资料后知道了问题原因：Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是独立开的。在项目的配置文件中数据库host配置项一般是127.0.0.1，但这样写的话项目是去访问的PHP-FPM容器，这个容器中自然没有MySQL所以访问不到。 解决">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-25T06:56:20.000Z">
+<meta property="og:updated_time" content="2019-04-04T01:16:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Laradock中MySQL连接的坑">
 <meta name="twitter:description" content="最近开始使用Laradock作为开发环境进行项目开发，按照教程将必备的软件都搭建好了，结果在项目中一直连接不上MySQL。网上查了好多资料后知道了问题原因：Docker中每个容器都是相对独立的，所以PHP-FPM和MySQL容器也是独立开的。在项目的配置文件中数据库host配置项一般是127.0.0.1，但这样写的话项目是去访问的PHP-FPM容器，这个容器中自然没有MySQL所以访问不到。 解决">
@@ -344,7 +344,8 @@
 <ol>
 <li><p>首先打开<code>docker-compose.yml</code>文件，检查PHP-FPM配置中<code>links</code>选项是否连接了MySQL，如果没有则在此项中添加MySQL的容器名称，我这里是<code>mysql</code>，注意大小写。重新构建容器。</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">`php-fpm:</span><br><span class="line">links:</span><br><span class="line">-mysql</span><br></pre></td></tr></table></figure>
-<p> <code>2. 进入项目中，将数据库配置中的</code>host<code>改为</code>mysql`，这样就完成了项目连接MySQL的操作。</p>
+</li>
+<li><p>进入项目中，将数据库配置中的<code>host</code>改为<code>mysql</code>，这样就完成了项目连接MySQL的操作。</p>
 </li>
 </ol>
 

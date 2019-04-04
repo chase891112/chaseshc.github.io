@@ -345,7 +345,8 @@
 <ol>
 <li><p>首先打开<code>docker-compose.yml</code>文件，检查PHP-FPM配置中<code>links</code>选项是否连接了MySQL，如果没有则在此项中添加MySQL的容器名称，我这里是<code>mysql</code>，注意大小写。重新构建容器。</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">`php-fpm:</span><br><span class="line">links:</span><br><span class="line">-mysql</span><br></pre></td></tr></table></figure>
-<p> <code>2. 进入项目中，将数据库配置中的</code>host<code>改为</code>mysql`，这样就完成了项目连接MySQL的操作。</p>
+</li>
+<li><p>进入项目中，将数据库配置中的<code>host</code>改为<code>mysql</code>，这样就完成了项目连接MySQL的操作。</p>
 </li>
 </ol>
 
