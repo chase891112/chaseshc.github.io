@@ -79,14 +79,17 @@
 
 
 
+<meta name="description" content="测试驱动开发测试驱动开发（英语：Test-driven development，缩写为TDD）是一种软件开发过程中的应用方法，由极限编程中倡导，以其倡导先写测试程序，然后编码实现其功能得名。 测试驱动开发是戴两顶帽子思考的开发方式：先戴上实现功能的帽子，在测试的辅助下，快速实现其功能；再戴上重构的帽子，在测试的保护下，通过去除冗余的代码，提高代码质量。测试驱动着整个开发过程：首先，驱动代码的设计和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="测试驱动开发和结对编程">
 <meta property="og:url" content="https://www.chaseshen.club/2018/12/18/测试驱动开发和结对编程/index.html">
 <meta property="og:site_name" content="Chase&#39;s Club">
+<meta property="og:description" content="测试驱动开发测试驱动开发（英语：Test-driven development，缩写为TDD）是一种软件开发过程中的应用方法，由极限编程中倡导，以其倡导先写测试程序，然后编码实现其功能得名。 测试驱动开发是戴两顶帽子思考的开发方式：先戴上实现功能的帽子，在测试的辅助下，快速实现其功能；再戴上重构的帽子，在测试的保护下，通过去除冗余的代码，提高代码质量。测试驱动着整个开发过程：首先，驱动代码的设计和">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-28T02:36:48.263Z">
+<meta property="og:updated_time" content="2019-05-28T03:15:04.188Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="测试驱动开发和结对编程">
+<meta name="twitter:description" content="测试驱动开发测试驱动开发（英语：Test-driven development，缩写为TDD）是一种软件开发过程中的应用方法，由极限编程中倡导，以其倡导先写测试程序，然后编码实现其功能得名。 测试驱动开发是戴两顶帽子思考的开发方式：先戴上实现功能的帽子，在测试的辅助下，快速实现其功能；再戴上重构的帽子，在测试的保护下，通过去除冗余的代码，提高代码质量。测试驱动着整个开发过程：首先，驱动代码的设计和">
 
 
 
@@ -336,7 +339,22 @@
       
 
       
-        
+        <h1 id="测试驱动开发"><a href="#测试驱动开发" class="headerlink" title="测试驱动开发"></a>测试驱动开发</h1><p>测试驱动开发（英语：Test-driven development，缩写为TDD）是一种软件开发过程中的应用方法，由极限编程中倡导，以其倡导先写测试程序，然后编码实现其功能得名。</p>
+<p>测试驱动开发是戴两顶帽子思考的开发方式：先戴上实现功能的帽子，在测试的辅助下，快速实现其功能；再戴上重构的帽子，在测试的保护下，通过去除冗余的代码，提高代码质量。测试驱动着整个开发过程：首先，驱动代码的设计和功能的实现；其后，驱动代码的再设计和重构。</p>
+<h2 id="正面评价"><a href="#正面评价" class="headerlink" title="正面评价"></a>正面评价</h2><ul>
+<li>可以有效的避免过度设计带来的浪费。但是也有人强调在开发前需要有完整的设计再实施可以有效的避免重构带来的浪费。</li>
+<li>可以让开发者在开发中拥有更全面的视角。</li>
+</ul>
+<h2 id="负面评价"><a href="#负面评价" class="headerlink" title="负面评价"></a>负面评价</h2><ul>
+<li>开发者可能只完成满足了测试的代码，而忽略了对实际需求的实现。有实践者认为用结对编程的方式可以有效的避免这个问题。</li>
+<li>会放慢开发实际代码的速度，特别对于要求开发速度的原型开发造成不利。这里需要考虑开发速度需要包含功能和品质两个方面，单纯的代码速度可能不能完全代表开发速度。</li>
+<li>对于GUI,资料库和Web应用而言。构造单元测试比较困难，如果强行构造单元测试，反而给维护带来额外的工作量。有开发者认为这个是由于设计方法，而不是开发方法造成的困难。</li>
+<li>使得开发更为关注用例和测试案例，而不是设计本身。目前，对于这个观点有较多的争议。</li>
+<li>测试驱动开发会导致单元测试的覆盖度不够，比如可能缺乏边界测试。在实际的操作中，和非测试驱动开发一样，当代码完成以后还是需要补充单元测试，提高测试的覆盖度。</li>
+</ul>
+<h1 id="结对编程"><a href="#结对编程" class="headerlink" title="结对编程"></a>结对编程</h1><p>结对编程（英语：Pair programming）是一种敏捷软件开发的方法，两个程序员在一个计算机上共同工作。一个人输入代码，而另一个人审查他输入的每一行代码。输入代码的人称作驾驶员，审查代码的人称作观察员（或导航员）。两个程序员经常互换角色。</p>
+<p>在结对编程中，观察员同时考虑工作的战略性方向，提出改进的意见，或将来可能出现的问题以便处理。这样使得驾驶者可以集中全部注意力在完成当前任务的“战术”方面。观察员当作安全网和指南。结对编程对开发程序有很多好处。比如增加纪律性，写出更好的代码等。</p>
+
       
     </div>
     
@@ -369,10 +387,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/28/test/" rel="prev" title="test">
-                test <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -424,8 +438,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -440,7 +463,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -485,6 +508,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#测试驱动开发"><span class="nav-number">1.</span> <span class="nav-text">测试驱动开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#正面评价"><span class="nav-number">1.1.</span> <span class="nav-text">正面评价</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#负面评价"><span class="nav-number">1.2.</span> <span class="nav-text">负面评价</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结对编程"><span class="nav-number">2.</span> <span class="nav-text">结对编程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
